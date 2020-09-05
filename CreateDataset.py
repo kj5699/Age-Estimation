@@ -31,10 +31,11 @@ names=["Child","Teenagers","Adults","Old"] #labels for the bins
 data_csv['age groups']= pd.cut(data_csv['age'],bins,labels=names)
 
 # printing the top 5 values
-print(data_csv.head())
+print(data_csv.iloc[1]['name'])
 
 # writings to the csv
 data_csv.to_csv("Face_data.csv",index=False)
+print(data_csv['age groups'].unique())
     
     
     
